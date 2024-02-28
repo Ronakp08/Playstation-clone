@@ -1,0 +1,1272 @@
+@font-face {
+  font-family: "SST-Light";
+  src: url("./asset/SST-Light-latin.3cce6.woff2");
+}
+@font-face {
+  font-family: "SST-Bold";
+  src: url("./asset/SST-Bold-latin.7c968.woff2");
+}
+@font-face {
+  font-family: "SST-Medium";
+  src: url("./asset/SST-Medium-latin.1167b.woff2");
+}
+@font-face {
+  font-family: "SST-Roman";
+  src: url("./asset/SST-Roman-latin.40348.woff2");
+}
+@font-face {
+  font-family: "SST-SharedNav";
+  src: url("./asset/sharedNav.woff");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.sony-logo {
+  width: 100%;
+  height: 36px;
+  background-color: black;
+  text-align: right;
+  padding-right: 10px;
+  transition: 0.1s;
+}
+.sony-logo img {
+  width: 75px;
+  height: 100%;
+  background-color: black;
+}
+.navbar {
+  width: 100%;
+  height: 64px;
+  left: 0;
+  transition: 0.22s all ease;
+  right: 0;
+  padding: 0px 10px;
+  display: flex;
+  background-color: white;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 99;
+}
+.logo {
+  align-items: center;
+  display: flex;
+}
+.logo .navItems ul {
+  display: flex;
+  gap: 12px;
+  list-style: none;
+  font-family: "SST-Bold";
+  font-weight: 700;
+  font-size: 13px;
+  margin-left: 25px;
+}
+.logo .navItems ul li:hover {
+  color: #0070d1;
+  cursor: pointer;
+}
+.menu-item {
+  align-items: center;
+  display: flex;
+}
+.rotate-icon {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+.right-nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.right-nav button {
+  padding: 4px 12px;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "SST-Medium";
+  background-color: #0070cc;
+  cursor: pointer;
+}
+.right-nav img {
+  width: 30px;
+  cursor: pointer;
+}
+main {
+  transition: 0.5s ease;
+  height: 100vh;
+}
+main .slider-container {
+  width: 100%;
+  height: 80%;
+}
+
+.slider {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.7s;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+}
+#games {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slide:nth-child(1) {
+  background-image: url(./asset/The-last-of-us-part-ii-remastered-hero-banner-desktop-02-en-16mar23.jpeg);
+  background-size: cover;
+}
+.slide:nth-child(2) {
+  background-image: url(./asset/great-games-2024-homepage-hero-desktop-01-14dec23$en.webp);
+  background-size: cover;
+}
+.slide:nth-child(3) {
+  background-image: url(./asset/NBA2K24-s4-hero-desktop-01-en-05jan24.jpeg);
+  background-size: cover;
+}
+.slide:nth-child(4) {
+  background-image: url(./asset/spider-man-2-hero-banner-desktop-07-en-16oct23.webp);
+  background-size: cover;
+}
+.slide:nth-child(5) {
+  background-image: url(./asset/Fortnite-hero-desktop-05-en-11dec23.webp);
+  background-size: cover;
+}
+.button-container {
+  height: 50%;
+  text-align: center;
+  margin-top: 14px;
+  overflow: hidden;
+  padding-top: 10 px;
+}
+.button-one{
+  height: 50%;
+  width: 100%;
+}
+
+.button {
+  width: 15%;
+  height: 95%;
+  border-radius: 12px;
+  display: inline-block;
+  opacity: 0.78;
+  padding: 4px;
+  margin-inline: 5px;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.buttonimage {
+  width: 100%;
+  align-items: center;
+  align-content: center;
+  overflow: hidden;
+  border-radius: 8px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.438);
+}
+.buttonimage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.button:hover {
+  opacity: 2;
+  transform: translateY(-7px); /* Adjust the value as needed */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.button.active {
+  border: 3px solid #0070d1;
+  opacity: 2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.button:hover ~ .button,
+.button:hover.active ~ .button {
+  opacity: 0.5;
+}
+
+/* Utiliti Classes */
+.margin {
+  padding-top: 60px;
+}
+
+.wrapper {
+  margin-top: 10px;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Second Slider */
+
+.custom-slider-container {
+  width: 100%;
+  height: 74%;
+  overflow: hidden;
+  position: relative;
+}
+
+.custom-slider {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.custom-slide {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  font-family: "SST-Light";
+  font-weight: 100;
+}
+.ps5 {
+  display: flex;
+}
+.ps5-dark {
+  padding-top: 55px;
+  color: #0068bd;
+  font-size: 25px;
+  font-weight: 300;
+}
+.ps5 .left {
+  width: 40%;
+  height: 100%;
+  padding: 80px;
+}
+.ps5 .left p {
+  line-height: 57px;
+  font-size: 3vw;
+}
+.ps5 .left .sub {
+  color: #6b6b6b;
+  margin-top: 14px;
+  font-weight: normal;
+  opacity: 2;
+  font-size: 15px;
+}
+.left #find {
+  padding: 15px 20px;
+  background-color: #0070d1;
+  border: none;
+  margin-top: 20px;
+  font-family: "SST-Bold";
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 25px;
+}
+.ps5 .right {
+  padding: 80px 80px 0px 0px;
+  width: 60%;
+}
+.ps5 .right img {
+  width: 100%;
+}
+.custom-button-container {
+  height: 22%;
+  width: 100%;
+  text-align: center;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 5px;
+  padding: 20px;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  position: relative;
+  scroll-behavior: smooth;
+}
+.custom-button-container::-webkit-scrollbar {
+  display: none;
+}
+
+.custom-buttons-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.custom-button {
+  width: 14%;
+  height: 95%;
+  align-items: center;
+  border-radius: 20px;
+  display: inline-block;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.2); /* You can change the color and size of the border */
+  box-sizing: border-box;
+  opacity: 0.78;
+  padding: 2px;
+  margin-inline: 5px;
+  flex-shrink: 0;
+}
+
+.cstbuttonimage {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  border-radius: 10px;
+  height: 100%;
+  background-color: white;
+}
+
+.imgtitle {
+  padding-top: 10px;
+  color: rgb(107, 107, 107);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5em;
+  font-family: "SST-Light";
+}
+
+.cstbuttonimage img {
+  width: 88%;
+  height: 98%;
+  object-fit: contain;
+}
+
+.custom-button:hover {
+  transform: translateY(-2px); /* Adjust the value as needed */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  margin-bottom: -2px;
+}
+
+.custom-button.active .imgtitle {
+  color: #0070d1;
+}
+
+.custom-button.active {
+  border: 3px solid #0070d1;
+  opacity: 2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* pagination */
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.pagination-symbol {
+  width: 15px;
+  height: 2px;
+  border-radius: 0;
+  background-color: #d7d4d4;
+  margin: 0 2px;
+  cursor: pointer;
+}
+
+.pagination-symbol.active {
+  background-color: blue;
+}
+
+/* Buttons left and right */
+.custom-buttons-wrapper .sldbtn {
+  position: absolute;
+  top: 85px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  direction: ltr;
+  padding-left: 42px;
+  padding-right: 42px;
+}
+
+.btns {
+  cursor: pointer;
+  background: 0 0;
+  height: 48px;
+  width: 48px;
+  border-width: 2px;
+  border-color: transparent;
+  border-style: solid;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.1s ease-in-out;
+}
+.btns:active {
+  border-color: #2687e2;
+}
+
+.scroll-button1 {
+  width: 40px;
+  height: 40px;
+  background-color: #0070cc;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.scroll-button2 {
+  width: 40px;
+  height: 40px;
+  background: 0 0;
+  background-color: #0070cc;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.scroll-button1:active,
+.scroll-button2:active {
+  border-color: #003c5f; /* Change border color on click */
+}
+.scroll-button1:active,
+.scroll-button2:active :hover {
+  border-color: #003c5f; /* Change border color on click */
+}
+
+/*     Page 3   */
+
+.page3 {
+  background-color: rgb(14, 14, 14);
+  height: 105%;
+}
+
+.p3head {
+  color: white;
+  text-align: left;
+  font-family: "SST-Light";
+  font-weight: 200;
+  letter-spacing: 0.1px;
+  line-height: 1.25em;
+  display: block;
+  font-size: 2.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  padding-top: 50px;
+  padding-left: 60px;
+}
+
+/*        Toggle     */
+
+.toggle-container {
+  width: 18%;
+  display: flex;
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: #101317; /* Light black */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: auto;
+}
+
+.btntitle {
+  font-family: "SST-Normal";
+  color: white;
+}
+
+.toggle-button.selected .btntitle {
+  color: rgb(0, 0, 0);
+  font-weight: 400;
+}
+
+.toggle-button {
+  flex: 1;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.toggle-button:hover:not(.selected) .btntitle {
+  color: #3498db; /* Blue */
+}
+
+.toggle-button.selected {
+  background-color: #fff; /* White */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/*   Image Container */
+
+.images-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+  padding-top: 20px;
+  padding-left: 60px;
+}
+
+.image-card {
+  margin: 5px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s, opacity 0.3s;
+}
+.image-card:hover {
+  transform: translateY(-10px);
+  opacity: 5;
+}
+
+.images-container .image-card:not(:hover) {
+  opacity: 0.8;
+}
+
+.toggle-button.selected ~ .images-container .image-card {
+  transition: opacity 0.3s;
+}
+
+.image-card img {
+  width: 225px; /* Adjust the width as needed */
+  height: 223px; /* Adjust the height as needed */
+  border-radius: 10px;
+}
+
+.game-name {
+  color: white;
+  font-family: "SST-Normal";
+  font-size: 16px;
+}
+
+/* Page 4 */
+
+.section4 {
+  background-image: url(./asset/Section_4/play-play-play-ps-plus-background-desktop-01-ja-jp-03jul23\ \(1\).webp);
+  background-position: center top;
+  background-size: cover; /* You can use 'contain' if you want the whole image to be visible */
+  overflow: hidden;
+  height: 95%;
+  position: relative; /* Ensure the positioning context for absolute positioning */
+}
+
+.ps5plus {
+  position: absolute;
+  top: 13%;
+  left: 61%;
+  transform: translate(-50%, -50%);
+}
+
+.ps5plus img {
+  max-width: 50%; /* Ensure the image doesn't exceed its container */
+  height: 50%; /* Maintain aspect ratio */
+}
+
+.s4h1t{
+  font-size: 39px;
+  font-weight: 10;
+  font-family: 'SST-Light';
+  letter-spacing: .1px;
+  line-height: 1.25em;
+  padding-left: 36%;
+  padding-top: 9%;
+}
+
+.para4{
+  color:rgb(107, 107, 107);
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: .1px;
+  line-height: 1.5em;
+  display: block;
+  text-align: center;
+  padding-top: 1%;
+}
+
+.custom-button-container4 {
+  height: 60%;
+  width: 100%;
+  text-align: center;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 5px;
+  padding: 20px;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+.custom-button-container4::-webkit-scrollbar {
+  display: none;
+}
+
+.custom-buttons-wrapper4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 20px;
+}
+
+.custom-button4 {
+  width: 60%;
+  height: 90%;
+  align-items: center;
+  border-radius: 20px;
+  display: inline-block;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  padding: 2px;
+  margin-inline: 5px;
+  flex-shrink: 0;
+}
+
+.cstbuttonimage4 {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  border-radius: 20px;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.imgtitle4 {
+  padding-top: 10px;
+  color: rgb(107, 107, 107);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5em;
+  font-family: "SST-Light";
+}
+
+.cstbuttonimage4 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.custom-button4:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  margin-bottom: -2px;
+}
+
+.custom-button4.active .imgtitle4 {
+  color: #0070d1;
+}
+
+.custom-button4.active {
+  border: 3px solid #0070d1;
+  opacity: 2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.pagination-container4 {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.pagination-symbol4 {
+  width: 15px;
+  height: 2px;
+  border-radius: 0;
+  background-color: #d7d4d4;
+  margin: 0 2px;
+  cursor: pointer;
+}
+
+.pagination-symbol4.active {
+  background-color: blue;
+}
+
+.custom-buttons-wrapper4 .sldbtn4 {
+  position: absolute;
+  top: 215px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  direction: ltr;
+  padding-left: 42px;
+  padding-right: 42px;
+}
+
+.btns4 {
+  cursor: pointer;
+  background: 0 0;
+  height: 55px;
+  width: 55px;
+  border-width: 2px;
+  border-color: transparent;
+  border-style: solid;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.1s ease-in-out;
+}
+
+.btns4:active {
+  border-color: #2687e2;
+}
+
+.scroll-button1_1 {
+  width: 55px;
+  height: 55px;
+  background-color: #0070cc;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.scroll-button2_2 {
+  width: 55px;
+  height: 55px;
+  background: 0 0;
+  background-color: #0070cc;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.scroll-button1_1:active,
+.scroll-button2_2:active {
+  border-color: #003c5f;
+}
+
+.scroll-button1_1:active,
+.scroll-button2_2:active :hover {
+  border-color: #003c5f;
+}
+
+
+
+
+
+/* by minie */
+
+.discoverplaystationplus{
+  display: flex;
+  justify-content: center;
+  margin: -10px;
+  
+  
+  
+  
+}
+.discoverbutton{
+  background-color:  #0070cc;
+  height: auto;
+  border-radius: 10px;
+  padding: 5px 10px 5px 10px;
+  color: aliceblue;
+  font-style: bold;
+  justify-content: center;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+.discoverbutton:hover{
+  transform: scale(0.9);
+}
+
+
+/*seventh section */
+
+.media-block-image{
+  
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 70px;
+  gap: 10px;
+  background-image: url("https://gmedia.playstation.com/is/image/SIEPDC/this-month-on-playstation-jun-homepage-background-desktop-01-en-26may23?$4000px$");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.para1{
+  font-size: 30px;
+  color: white;
+  font-family: "SST-Light";
+}
+.para2{
+  font-size: 35px;
+  color: white;
+  font-family: "SST-Medium";
+  font-style: bold;
+  font-weight: 600;
+}
+.para3{
+  font-size: 20px;
+  color: whitesmoke;
+  line-height: 30px;
+  padding-right: 80px;
+  font-family: "SST-Roman";
+}
+.white-btn{
+  background-color: white;
+  color: solid black;
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 15px;  
+}
+.media-block-image>button:hover{
+  transform: scale(0.9);
+}
+
+
+
+
+/* eight section cards */
+
+.eigth-section-cards {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction:row;
+  margin-top: 0%;
+  justify-content: space-evenly;
+  background-color: rgba(38, 37, 79, 1);
+}
+
+.eigth-section-cards-card-1 {
+  flex-direction: column;
+  display: flex;
+  width: 320px;
+  cursor: pointer;
+}
+
+
+.eigth-section-cards-card-2 {
+  flex-direction: column;
+  display: flex;
+  width: 320px;
+  cursor: pointer;
+}
+
+.eigth-section-cards-card-3 {
+  flex-direction: column;
+  cursor: pointer;
+  display: flex;
+  width: 320px;
+}
+
+.eigth-section-cards-card-1>picture>img {
+  width: 100%;
+  border-radius: 15px;
+  height: 100%;
+}
+
+.eigth-section-cards-card-2>picture>img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+
+.eigth-section-cards-card-3>picture>img {
+  width: 100%;
+  border-radius: 15px;
+  height: 100%;
+}
+
+.eigth-section-cards-card-1>p {
+  color: white;
+  text-align: center;
+  padding-top: 17px;
+  font-family: "SST-Light";
+  font-size: 22px;
+}
+
+.eigth-section-cards-card-2>p {
+  color: white;
+  padding-top: 17px;
+  text-align: center;
+  font-family: "SST-Light";
+  font-size: 22px;
+}
+
+.eigth-section-cards-card-3>p {
+  color: white;
+  padding-top: 17px;
+  text-align: center;
+  font-family: "SST-Light";
+  font-size: 22px;
+}
+
+.eigth-section-cards-card-1>picture>img:hover {
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.8);
+  /* this creates a black box shadow */
+  transform: scale(1.05);
+  /* this will scale the element up to 105% of its original size */
+}
+
+.eigth-section-cards-card-2>picture>img:hover {
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.8);
+  /* this creates a black box shadow */
+  transform: scale(1.05);
+  /* this will scale the element up to 105% of its original size */
+}
+
+.eigth-section-cards-card-3>picture>img:hover {
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.8);
+  /* this creates a black box shadow */
+  transform: scale(1.05);
+  /* this will scale the element up to 105% of its original size */
+}
+
+
+/* follow us section */
+
+.followus{
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f7fa;
+  padding: 100px;
+  gap: 50px;
+}
+
+.followus-icon{
+  display: grid;
+  width: 40%;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.followus-icon img {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+  }
+
+  .followus h1{
+    font-family: "SST-Light";
+    font-size: 30px;
+    font-weight: lighter;
+  }
+
+
+  /* footer section */
+
+
+  .footer-section {
+    width: 100%;
+    height: 100%;
+    background-color: #00439c;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 80px;
+}
+
+.footer-section-logo {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    border-bottom: 1px solid #3d69b0;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.footer-section-logo-heading {
+    font-size: 50px;
+    color: white;
+    font-family: 'SST-Light';
+}
+
+
+.footer-section-logo-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid #3d69b0;
+    padding-bottom: 15px;
+    gap: 25px;
+}
+
+.footer-section-logo-content-left {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.footer-section-logo-content-right {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 100%;
+    flex-direction: row;
+}
+
+.footer-section-logo-content {
+    color: white;
+    margin: 15px 0;
+}
+
+.footer-section-logo-content h2 {
+    font-family: "SST-Light";
+    font-size: 17px;
+}
+
+.footer-section-logo-content p {
+    font-family: "SST-Light";
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.footer-section-logo-content p:hover {
+    color: rgb(211, 198, 198);
+}
+
+.footer-section-logo-content-one {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    gap: 7px;
+}
+
+.footer-section-logo-content-two {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    width: 200px;
+}
+
+.footer-section-logo-content-three {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    gap: 7px;
+}
+
+.footer-section-logo-content-four {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    gap: 7px;
+}
+
+.footer-section-logo-content-five {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    gap: 7px;
+}
+
+.footer-section-logo-content-six {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    gap: 7px;
+}
+
+.footer-section-logo-content-six-icons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.footer-section-logo-content-six-icons img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.footer-section-logo-content2 {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #3d69b0;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+
+.footer-section-logo-content2-first {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.footer-section-logo-content2-first-headings {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: 'SST-Light';
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.footer-section-logo-content2-first img {
+    width: 100px;
+    height: 100px;
+}
+
+.footer-section-logo-content2 p {
+    color: white;
+    font-family: "SST-Light";
+    width: 95%;
+    font-size: 14.5px;
+    line-height: 20px;
+}
+
+.footer-section-logo-content3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.footer-section-logo-content3-left {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.footer-section-logo-content3-left h3 {
+    font-family: "SST-Light";
+    font-size: 14px;
+}
+
+.footer-section-logo-content3-right {
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+    color: white;
+
+}
+
+.footer-section-logo-content3-right div {
+    font-family: "SST-Light";
+    font-size: 14px;
+}
+
+
+.deals{
+  display: flex;
+  /* margin: 0 auto; */
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 8rem;
+}
+
+.leftContent{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.headCont{
+  width: 55%;
+  font-family: "SST-light";
+}
+
+.headCont h1{
+  font-weight: 100;
+}
+
+.headCont p {
+  margin-top: 1rem;
+  color: #6b6b6b;
+}
+
+
+.discountImg img{
+  height: 30rem;
+  width: 60rem;
+  border-radius: 20px;
+}
+
+.tm{
+  font-size: 0.5rem;
+}
+
+.deal{
+  padding: 0.7rem;
+  border-style: none;
+  background-color: #d53b00;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 2rem;
+}
+
+.headCont, .dealsBtn{
+  margin-left: 1rem;
+}
